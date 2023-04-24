@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "actionkit-macos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/david-swift/ActionKit-macOS",
+      "state" : {
+        "revision" : "570ced725ad0f5f3f16524c32459fb4e6878cf7e",
+        "version" : "0.1.3"
+      }
+    },
+    {
+      "identity" : "colibricomponents-macos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/david-swift/ColibriComponents-macOS",
+      "state" : {
+        "revision" : "fbb45300b42cf17aef5ce1a0a89367f7eb70d34f",
+        "version" : "0.1.3"
+      }
+    },
+    {
+      "identity" : "settingskit-macos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/david-swift/SettingsKit-macOS",
+      "state" : {
+        "revision" : "a34c879f8dcf3928a0c516dc85fc262ba3fca42d",
+        "version" : "0.1.2"
+      }
+    },
+    {
+      "identity" : "sfsafesymbols",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SFSafeSymbols/SFSafeSymbols",
+      "state" : {
+        "revision" : "7cca2d60925876b5953a2cf7341cd80fbeac983c",
+        "version" : "4.1.1"
+      }
+    },
+    {
+      "identity" : "swiftlintplugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lukepistrol/SwiftLintPlugin",
+      "state" : {
+        "revision" : "f69b412a765396d44dc9f4788a5b79919c1ca9e3",
+        "version" : "0.2.2"
+      }
+    }
+  ],
+  "version" : 2
+}
