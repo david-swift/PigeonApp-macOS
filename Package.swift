@@ -23,8 +23,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.2.2"),
         .package(url: "https://github.com/david-swift/SettingsKit-macOS", from: "0.1.2"),
-        .package(url: "https://github.com/david-swift/ActionKit-macOS", from: "0.1.3"),
-        .package(url: "https://github.com/david-swift/ColibriComponents-macOS", from: "0.1.3")
+        .package(url: "https://github.com/david-swift/ActionKit-macOS", from: "0.1.3")
     ],
     targets: [
         .target(

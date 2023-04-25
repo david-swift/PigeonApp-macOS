@@ -228,16 +228,14 @@ Hide settings tabs.
 
 ### Dependencies
 - [ActionKit][10] licensed under the [MIT license][11]
-- [ColibriComponents][12] licensed under the [MIT license][13]
-- [SettingsKit][14] licensed under the [MIT license][15]
-- [SFSafeSymbols][16] licensed under the [MIT license][17]
-- [SwiftLintPlugin][18] licensed under the [MIT license][19]
+- [SettingsKit][12] licensed under the [MIT license][13]
+- [SwiftLintPlugin][14] licensed under the [MIT license][15]
 
 ### Other Thanks
-- The [contributors][20]
-- [SourceDocs][21] used for generating the [docs][22]
-- [SwiftLint][23] for checking whether code style conventions are violated
-- The programming language [Swift][24]
+- The [contributors][16]
+- [SourceDocs][17] used for generating the [docs][18]
+- [SwiftLint][19] for checking whether code style conventions are violated
+- The programming language [Swift][20]
 
 [1]:	#Elements
 [2]:	#Installation
@@ -250,18 +248,14 @@ Hide settings tabs.
 [9]:	https://github.com/david-swift/SettingsKit-macOS
 [10]:	https://github.com/david-swift/ActionKit-macOS
 [11]:	https://github.com/david-swift/ActionKit-macOS/blob/main/LICENSE.md
-[12]:	https://github.com/david-swift/ColibriComponents-macOS
-[13]:	https://github.com/david-swift/ColibriComponents-macOS/blob/main/LICENSE.md
-[14]:	https://github.com/david-swift/SettingsKit-macOS
-[15]:	https://github.com/david-swift/SettingsKit-macOS/blob/main/LICENSE.md
-[16]:	https://github.com/SFSafeSymbols/SFSafeSymbols
-[17]:	https://github.com/SFSafeSymbols/SFSafeSymbols/blob/stable/LICENSE
-[18]:	https://github.com/lukepistrol/SwiftLintPlugin
-[19]:	https://github.com/lukepistrol/SwiftLintPlugin/blob/main/LICENSE
-[20]:	Contributors.md
-[21]:	https://github.com/SourceDocs/SourceDocs
-[22]:	Documentation/Reference/ColibriComponents/README.md
-[23]:	https://github.com/realm/SwiftLint
-[24]:	https://github.com/apple/swift
+[12]:	https://github.com/david-swift/SettingsKit-macOS
+[13]:	https://github.com/david-swift/SettingsKit-macOS/blob/main/LICENSE.md
+[14]:	https://github.com/lukepistrol/SwiftLintPlugin
+[15]:	https://github.com/lukepistrol/SwiftLintPlugin/blob/main/LICENSE
+[16]:	Contributors.md
+[17]:	https://github.com/SourceDocs/SourceDocs
+[18]:	Documentation/Reference/ColibriComponents/README.md
+[19]:	https://github.com/realm/SwiftLint
+[20]:	https://github.com/apple/swift
 
 [image-1]:	Icons/GitHubBanner.png
