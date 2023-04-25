@@ -36,7 +36,7 @@ extension Pigeon {
 
     /// Initialize the appearance on startup.
     static func initAppearance() {
-        Task(priority: .high) {
+        Task { @MainActor in
             try? await Task.sleep(nanoseconds: 1)
             PigeonAppAction.setAppearance(PigeonModel.shared.settings.appearance)
             PigeonModel.shared.setSettings(information: PigeonModel.shared.pigeonCodeModel.information)

@@ -54,9 +54,7 @@ public class PigeonModel: ObservableObject {
 
     /// Set the appearance and the toolbar style.
     func set() {
-        Task {
-            PigeonAppAction.setAppearance(settings.appearance)
-        }
+        PigeonAppAction.setAppearance(settings.appearance)
         PigeonAppAction.setToolbarStyle(
             displayMode: settings.toolbarDisplayMode,
             style: settings.toolbarStyle

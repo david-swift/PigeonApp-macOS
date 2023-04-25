@@ -22,7 +22,7 @@ public enum PigeonAppAction {
     /// Set the app's theme to light, dark or automatic.
     /// - Parameter appearance: The new theme.
     public static func setAppearance(_ appearance: Appearance) {
-        Task {
+        Task { @MainActor in
             await MainActor.run {
                 NSApplication.shared.appearance = appearance.asNSAppearance
             }

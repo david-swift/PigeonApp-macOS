@@ -22,7 +22,7 @@ struct MainWindow<Content>: View where Content: View {
     var body: some View {
         content(iconFill, theme, templates)
             .symbolVariant(model.settings.iconFill ? .fill : .none)
-            .task {
+            .task { @MainActor in
                 PigeonAppAction.setToolbarStyle(
                     displayMode: PigeonModel.shared.settings.toolbarDisplayMode,
                     style: PigeonModel.shared.settings.toolbarStyle

@@ -148,9 +148,7 @@ struct TemplatesSettingsTab: View {
                     .padding()
                 SelectionItemPicker(selection: icon.wrappedValue.rawValue.binding { rawValue in
                     icon.wrappedValue = .init(rawValue: rawValue)
-                    Task {
-                        showIcons.wrappedValue = false
-                    }
+                    showIcons.wrappedValue = false
                 }, items: icons.filter { icon in
                     guard !filter.isEmpty else {
                         return true
