@@ -154,7 +154,6 @@ extension Pigeon {
             let string = "https://api.github.com/repos/\(gitHubUser)/\(gitHubRepo)/releases/latest"
             let regex = #/"name":"(?<name>.*?)"/#
             guard let url = URL(string: string) else { throw URLError(.badURL) }
-            print(try await url.lines)
             guard let json = try await url.lines.first(where: { _ in true }) else { throw URLError(.badURL) }
             guard let result = try regex.firstMatch(in: .init(json)) else { throw URLError(.badURL) }
             let tag = String(result.output.name)
