@@ -32,6 +32,8 @@ public struct PigeonSettingsData: Codable {
     public var selectedTheme: UUID
     /// Whether the user has seen the welcome screen of the current version.
     public var versionOverview: String?
+    /// The date of the last update reminder.
+    public var lastUpdateReminder: Date?
 
     /// Initialize the pigeon settings data.
     /// - Parameter templates: The templates.

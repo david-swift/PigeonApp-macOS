@@ -23,6 +23,8 @@ extension String {
     static var appearanceGeneralSettingsTab: Self { "appearance" }
     /// The identifier of the general settings subtab "Keyboard Shortcuts".
     static var keyboardShortcutsGeneralSettingsTab: Self { "shortcuts" }
+    /// The identifier of the subtab "Updates" in the settings tab "Updates".
+    static var updatesSettingsTab: Self { "updates" }
 
     /// Get the image of a package resource.
     /// The string has to be the name of a resource image.

@@ -191,7 +191,7 @@ public enum StandardSettingsTab: Identifiable {
             SettingsSubtab(.init(.init(
                 "Updates",
                 comment: "StandardSettingsTab (Updates subtab for checking updates)"
-            ), systemSymbol: .arrowTriangle2CirclepathCircle), id: "updates") {
+            ), systemSymbol: .arrowTriangle2CirclepathCircle), id: .updatesSettingsTab) {
                 if let newVersion, let link = appData.downloadLink {
                     VStack(alignment: .center) {
                         Text(

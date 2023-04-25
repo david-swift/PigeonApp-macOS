@@ -138,6 +138,17 @@ extension Pigeon {
                 editInformation { information in
                     information.appData.newestVersion = version.0
                     information.appData.downloadLink = version.1
+                    let reminder = {
+                        if let lastReminder = PigeonModel.shared.settings.lastUpdateReminder {
+                            let twoDays: Double = 175_000
+                            return Date.now.timeIntervalSince(lastReminder) > twoDays
+                        }
+                        return true
+                    }()
+                    if information.appData.newestVersion != information.appData.versions[safe: 0]?.tag && reminder {
+                        SettingsAction.showSettings(tab: StandardSettingsTab.updates.id, subtab: .updatesSettingsTab)
+                        PigeonModel.shared.settings.lastUpdateReminder = .now
+                    }
                 }
             }
         }
