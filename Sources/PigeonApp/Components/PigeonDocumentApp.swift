@@ -28,11 +28,9 @@ where Document: FileDocument, Document: ActionRepresentable, Content: View {
     /// The main scene of a PigeonDocumentApp.
     public var body: some Scene {
         DocumentGroup(newDocument: newDocument) { file in
-            UndoProvider(file.$document) { document in
-                MainWindow(
-                    content: view(content, document: document)
-                )
-            }
+            MainWindow(
+                content: view(content, document: file.$document)
+            )
         }
         .settings {
             for tab in pigeonModel.pigeonCodeModel.settings {
