@@ -12,7 +12,7 @@ import SwiftUI
 /// A PigeonDocumentApp is a SwiftUI app with a certain organization in the settings window and menu bar.
 /// It is basically a PigeonApp but using SwiftUI.DocumentGroup instead of SwiftUI.WindowGroup.
 public struct PigeonDocumentApp<Document, Content>: Pigeon
-where Document: FileDocument, Document: ActionRepresentable, Content: View {
+where Document: FileDocument, Content: View {
 
     /// The ``Pigeon.ContentView`` in the ``PigeonDocumentApp`` is a type defined by the coder.
     public typealias ContentView = Content
