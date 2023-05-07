@@ -32,7 +32,7 @@ where Document: FileDocument, Content: View {
                 content: view(content, document: file.$document)
             )
         }
-        .settings {
+        .settings(symbolVariant: pigeonModel.settings.iconFill ? .fill : .none) {
             for tab in pigeonModel.pigeonCodeModel.settings {
                 if tab.id == pigeonModel.settings.standardSettingsTab {
                     Self.shortcut(tab: tab)
