@@ -31,6 +31,15 @@ Set the help link.
   - link: The help link.
 - Returns: The ``PigeonApp`` or ``PigeonDocumentApp``.
 
+### `supabase(data:table:)`
+
+Add data that can be stored in a Supabase repository.
+Do also save the data locally.
+- Parameters:
+  - data: The data to store in the database and update with the database.
+  - table: The Supabase table's name.
+- Returns: The ``PigeonApp`` or ``PigeonDocumentApp``.
+
 ### `pigeonSettings(_:)`
 
 Add custom settings tabs.

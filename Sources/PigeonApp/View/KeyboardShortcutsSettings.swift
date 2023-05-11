@@ -14,7 +14,8 @@ struct KeyboardShortcutsSettings: View {
     /// The shared ``PigeonModel``.
     @StateObject private var model = PigeonModel.shared
     /// The active color scheme.
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme)
+    var colorScheme
 
     /// The view's body.
     var body: some View {

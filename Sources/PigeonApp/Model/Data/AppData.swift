@@ -30,6 +30,8 @@ public struct AppData {
     public var downloadLink: URL?
     /// The link to the documentation.
     public var help: (String, URL)?
+    /// The name of the table in Supabase.
+    public var supabaseTable: String = .init()
 
     /// The installed version of the app.
     public var installedVersion: Version? {

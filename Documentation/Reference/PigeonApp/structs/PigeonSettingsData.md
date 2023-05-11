@@ -49,6 +49,22 @@ Whether the user has seen the welcome screen of the current version.
 
 The date of the last update reminder.
 
+### `supabaseURL`
+
+The URL for the Supabase database.
+
+### `supabaseKey`
+
+The key for the Supabase database.
+
+### `supabaseRowID`
+
+The ID for the Supabase table row.
+
+### `client`
+
+The Supabase client.
+
 ## Methods
 ### `init(templates:)`
 

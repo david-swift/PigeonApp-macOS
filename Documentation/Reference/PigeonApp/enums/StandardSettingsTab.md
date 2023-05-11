@@ -13,6 +13,10 @@ The general settings tab.
 
 The behaviors settings tab.
 
+### `synchronization`
+
+The synchronization settings tab.
+
 ### `templates`
 
 The templates settings tab.

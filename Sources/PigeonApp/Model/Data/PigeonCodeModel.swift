@@ -42,6 +42,9 @@ public struct PigeonCodeModel {
         if !PigeonModel.shared.behaviors.isEmpty {
             firstSettings.append(.behaviors)
         }
+        if PigeonModel.shared.supabaseData != nil {
+            firstSettings.append(.synchronization)
+        }
         if information.templatesActive {
             firstSettings.append(.templates)
         }

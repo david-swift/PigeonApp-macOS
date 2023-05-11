@@ -197,8 +197,17 @@ Add the “Behaviors” settings tab by providing behaviors titles and their fun
 // ...
 ```
 
+#### Synchronization Settings Tab
+Let the user specify a [Supabase][9] project and table row for synchronization. Local changes are automatically written into the table row and changes on the database observed and the local value updated.
+
+```swift
+// ...
+.supabase(data: $data, table: "table")
+// ...
+```
+
 #### Custom Settings Tabs
-Add custom settings tabs. Do not use `settings(symbolVariant:_:)`, instead, use `pigeonSettings(_:)`. Learn [here][9] more about how to define settings or extend existing tabs.
+Add custom settings tabs. Do not use `settings(symbolVariant:_:)`, instead, use `pigeonSettings(_:)`. Learn [here][10] more about how to define settings or extend existing tabs.
 
 ```swift
 // ...
@@ -227,15 +236,16 @@ Hide settings tabs.
 ## Thanks
 
 ### Dependencies
-- [ActionKit][10] licensed under the [MIT license][11]
-- [SettingsKit][12] licensed under the [MIT license][13]
-- [SwiftLintPlugin][14] licensed under the [MIT license][15]
+- [Supabase][11] licensed under the [MIT license][12]
+- [ActionKit][13] licensed under the [MIT license][14]
+- [SettingsKit][15] licensed under the [MIT license][16]
+- [SwiftLintPlugin][17] licensed under the [MIT license][18]
 
 ### Other Thanks
-- The [contributors][16]
-- [SourceDocs][17] used for generating the [docs][18]
-- [SwiftLint][19] for checking whether code style conventions are violated
-- The programming language [Swift][20]
+- The [contributors][19]
+- [SourceDocs][20] used for generating the [docs][21]
+- [SwiftLint][22] for checking whether code style conventions are violated
+- The programming language [Swift][23]
 
 [1]:	#Elements
 [2]:	#Installation
@@ -245,17 +255,20 @@ Hide settings tabs.
 [6]:	#Hide-Tabs
 [7]:	https://github.com/david-swift/SettingsKit-macOS
 [8]:	https://github.com/david-swift/ActionKit-macOS
-[9]:	https://github.com/david-swift/SettingsKit-macOS
-[10]:	https://github.com/david-swift/ActionKit-macOS
-[11]:	https://github.com/david-swift/ActionKit-macOS/blob/main/LICENSE.md
-[12]:	https://github.com/david-swift/SettingsKit-macOS
-[13]:	https://github.com/david-swift/SettingsKit-macOS/blob/main/LICENSE.md
-[14]:	https://github.com/lukepistrol/SwiftLintPlugin
-[15]:	https://github.com/lukepistrol/SwiftLintPlugin/blob/main/LICENSE
-[16]:	Contributors.md
-[17]:	https://github.com/SourceDocs/SourceDocs
-[18]:	Documentation/Reference/ColibriComponents/README.md
-[19]:	https://github.com/realm/SwiftLint
-[20]:	https://github.com/apple/swift
+[9]:	https://supabase.com
+[10]:	https://github.com/david-swift/SettingsKit-macOS
+[11]:	https://github.com/supabase-community/supabase-swift
+[12]:	https://github.com/supabase-community/supabase-swift/blob/master/LICENSE
+[13]:	https://github.com/david-swift/ActionKit-macOS
+[14]:	https://github.com/david-swift/ActionKit-macOS/blob/main/LICENSE.md
+[15]:	https://github.com/david-swift/SettingsKit-macOS
+[16]:	https://github.com/david-swift/SettingsKit-macOS/blob/main/LICENSE.md
+[17]:	https://github.com/lukepistrol/SwiftLintPlugin
+[18]:	https://github.com/lukepistrol/SwiftLintPlugin/blob/main/LICENSE
+[19]:	Contributors.md
+[20]:	https://github.com/SourceDocs/SourceDocs
+[21]:	Documentation/Reference/ColibriComponents/README.md
+[22]:	https://github.com/realm/SwiftLint
+[23]:	https://github.com/apple/swift
 
 [image-1]:	Icons/GitHubBanner.png

@@ -62,3 +62,15 @@ The font size of a feature icon in the ``WhatsNewView``.
 ### `featureIconWidth`
 
 The width of a feature icon in the ``WhatsNewView``.
+
+### `completionBadgeWidth`
+
+The width of the completion badge in the synchronization settings tab.
+
+### `completionBadgeShadowRadius`
+
+The radius of the completion badge's shadow.
+
+### `completionBadgeFontSize`
+
+The font size of the completion badge's shadow.

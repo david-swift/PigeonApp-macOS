@@ -11,7 +11,8 @@ import SwiftUI
 struct AppearanceSettings: View {
 
     /// The color scheme.
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme)
+    var colorScheme
     /// The shared ``PigeonModel``.
     @StateObject private var model = PigeonModel.shared
 

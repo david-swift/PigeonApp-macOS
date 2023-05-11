@@ -19,10 +19,12 @@ struct TestAppApp: App {
     @State private var function1 = Function(id: "", name: "", description: "", functions: .default)
     /// The second function in the behaviors tab.
     @State private var function2 = Function(id: "", name: "", description: "", functions: .default)
+    /// Some data for testing the Supabase synchronization.
+    @State private var data = "Hello, world!"
 
     /// The app.
     var body: some Scene {
-        PigeonApp(appName: "TestApp", appIcon: .init(nsImage: .init(named: "AppIcon") ?? .init())) { _, _, _ in
+        PigeonApp(appName: "PigeonApp", appIcon: .init(nsImage: .init(named: "AppIcon") ?? .init())) { _, _, _ in
             NavigationSplitView {
                 Text("Sidebar")
                     .toolbar(id: "sidebar") {
@@ -31,7 +33,8 @@ struct TestAppApp: App {
                         }
                     }
             } detail: {
-                Text("Detail")
+                TextField("Detail" as String, text: $data)
+                    .padding()
                     .toolbar(id: "detail") {
                         ToolbarItem(id: "world") {
                             Button("World") { }
@@ -60,6 +63,7 @@ struct TestAppApp: App {
                 Template(title: "Teddy", icon: .teddybear, content: .init())
             }
         }
+        .supabase(data: $data, table: "test")
         .themes { theme in
             Text("That's the preview!")
                 .padding()

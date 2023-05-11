@@ -7,6 +7,7 @@
 
 import ActionKit
 import ColibriComponents
+import Supabase
 import SwiftUI
 
 /// Data used for customizing the user experience.
@@ -34,6 +35,24 @@ public struct PigeonSettingsData: Codable {
     public var versionOverview: String?
     /// The date of the last update reminder.
     public var lastUpdateReminder: Date?
+    /// The URL for the Supabase database.
+    public var supabaseURL: String = .init()
+    /// The key for the Supabase database.
+    public var supabaseKey: String = .init()
+    /// The ID for the Supabase table row.
+    public var supabaseRowID: Int = 0
+
+    /// The Supabase client.
+    var client: SupabaseClient? {
+        if let url = URL(string: supabaseURL) {
+            return .init(supabaseURL: url, supabaseKey: supabaseKey)
+        }
+        PigeonModel.shared.synchronizationSuccess = (false, .init(localized: .init(
+            "\"\(supabaseURL)\" is not a valid URL.",
+            comment: "AppModel (String to URL conversion error)"
+        )))
+        return nil
+    }
 
     /// Initialize the pigeon settings data.
     /// - Parameter templates: The templates.

@@ -40,6 +40,12 @@ extension CGFloat {
     static var featureIconFontSize: Self { 25 }
     /// The width of a feature icon in the ``WhatsNewView``.
     static var featureIconWidth: Self { 20 }
+    /// The width of the completion badge in the synchronization settings tab.
+    static var completionBadgeWidth: Self { 200 }
+    /// The radius of the completion badge's shadow.
+    static var completionBadgeShadowRadius: CGFloat { 30 }
+    /// The font size of the completion badge's shadow.
+    static var completionBadgeFontSize: CGFloat { 100 }
 
 }
 

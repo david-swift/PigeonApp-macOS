@@ -23,14 +23,16 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.2.2"),
         .package(url: "https://github.com/david-swift/SettingsKit-macOS", from: "0.1.2"),
-        .package(url: "https://github.com/david-swift/ActionKit-macOS", from: "0.1.3")
+        .package(url: "https://github.com/david-swift/ActionKit-macOS", from: "0.1.3"),
+        .package(url: "https://github.com/supabase-community/supabase-swift", .upToNextMajor(from: "0.2.1"))
     ],
     targets: [
         .target(
             name: "PigeonApp",
             dependencies: [
                 .product(name: "SettingsKit", package: "SettingsKit-macOS"),
-                .product(name: "ActionKit", package: "ActionKit-macOS")
+                .product(name: "ActionKit", package: "ActionKit-macOS"),
+                .product(name: "Supabase", package: "supabase-swift")
             ],
             resources: [
                 .process("Resources")

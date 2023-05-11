@@ -23,6 +23,7 @@
 -   [PigeonCommands](structs/PigeonCommands.md)
 -   [PigeonDocumentApp](structs/PigeonDocumentApp.md)
 -   [PigeonLink](structs/PigeonLink.md)
+-   [PigeonModel.SupabaseType](structs/PigeonModel.SupabaseType.md)
 -   [PigeonSettingsData](structs/PigeonSettingsData.md)
 -   [SchemeTheme](structs/SchemeTheme.md)
 -   [Template](structs/Template.md)

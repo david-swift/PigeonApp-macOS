@@ -86,6 +86,27 @@ extension Pigeon {
         }
     }
 
+    /// Add data that can be stored in a Supabase repository.
+    /// Do also save the data locally.
+    /// - Parameters:
+    ///   - data: The data to store in the database and update with the database.
+    ///   - table: The Supabase table's name.
+    /// - Returns: The ``PigeonApp`` or ``PigeonDocumentApp``.
+    public func supabase<Data>(data: Binding<Data>, table: String) -> Self where Data: Codable {
+        Task { @MainActor in
+            PigeonModel.shared.supabaseData = try? JSONEncoder().encode(data.wrappedValue)
+            PigeonModel.shared.updateSupabaseData = { newValue in
+                if let newValue = try? JSONDecoder().decode(Data.self, from: newValue) {
+                    data.wrappedValue = newValue
+                }
+            }
+        }
+        let newSelf = editInformation { information in
+            information.appData.supabaseTable = table
+        }
+        return newSelf
+    }
+
     /// Add custom settings tabs.
     /// - Parameter settings: The settings tabs to add.
     /// - Returns: The ``PigeonApp`` or ``PigeonDocumentApp``.
@@ -222,9 +243,11 @@ extension Pigeon {
     /// Add the settings tab for editing the app's behaviors.
     /// - Parameter behaviors: The app's behaviors editors.
     public func behaviors(
-        @ArrayBuilder<Behavior> behaviors: () -> [(LocalizedStringResource, FunctionEditor)]
+        @ArrayBuilder<Behavior> behaviors: @escaping () -> [(LocalizedStringResource, FunctionEditor)]
     ) -> Self {
-        PigeonModel.shared.behaviors = behaviors()
+        Task { @MainActor in
+            PigeonModel.shared.behaviors = behaviors()
+        }
         return self
     }
 

@@ -14,7 +14,8 @@ struct MainWindow<Content>: View where Content: View {
     /// It stores values that are the same in the whole app.
     @StateObject private var model = PigeonModel.shared
     /// The active color scheme.
-    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.colorScheme)
+    private var colorScheme
     /// The content bar of this window, or nil if there is no content bar.
     var content: (Bool, Theme, [TemplateFolder]) -> Content
 

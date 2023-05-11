@@ -18,6 +18,8 @@ public enum StandardSettingsTab: Identifiable {
     case general
     /// The behaviors settings tab.
     case behaviors
+    /// The synchronization settings tab.
+    case synchronization
     /// The templates settings tab.
     case templates
     /// The themes settings tab.
@@ -39,6 +41,8 @@ public enum StandardSettingsTab: Identifiable {
             return .init("General", comment: "StandardSettingsTab (The general settings tab)")
         case .behaviors:
             return .init("Behaviors", comment: "StandardSettingsTab (The behaviors settings tab)")
+        case .synchronization:
+            return .init("Synchronization", comment: "StandardSettingsTab (The synchronization settings tab)")
         case .templates:
             return .init("Templates", comment: "StandardSettingsTab (The templates settings tab)")
         case .themes:
@@ -57,6 +61,8 @@ public enum StandardSettingsTab: Identifiable {
             return .gearshape
         case .behaviors:
             return .rectangleGrid1x2
+        case .synchronization:
+            return .arrowTriangle2Circlepath
         case .templates:
             return .docText
         case .themes:
@@ -160,6 +166,13 @@ public enum StandardSettingsTab: Identifiable {
                 SettingsSubtab(.init(behavior.0, systemSymbol: .rectangleGrid1x2), id: behavior.0.key) {
                     behavior.1
                 }
+            }
+        case .synchronization:
+            SettingsSubtab(.init(.init(
+                "Synchronization",
+                comment: "StandardSettingsTab (Synchronization settings subtab)"
+            ), systemSymbol: .arrowTriangle2Circlepath), id: "sync") {
+                SynchronizationSettings()
             }
         case .templates:
             for group in PigeonModel.shared.settings.templates {

@@ -21,6 +21,22 @@ Data defined by the coder.
 
 The behaviors.
 
+### `synchronizationSuccess`
+
+Whether the last synchronization task succeeded and, if not, the error message.
+
+### `gotData`
+
+Whether the data is already synchronized.
+
+### `supabaseData`
+
+The data for synchronization with the Supabase database.
+
+### `updateSupabaseData`
+
+A closure for updating the local data from the Supabase database.
+
 ## Methods
 ### `init(information:templates:)`
 
@@ -37,3 +53,11 @@ Set the settings.
 ### `set()`
 
 Set the appearance and the toolbar style.
+
+### `setData()`
+
+Update the data in the Supabase database.
+
+### `getData()`
+
+Update the local data from the Supabase database.

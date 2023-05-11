@@ -45,6 +45,10 @@ The link for downloading the newest available version.
 
 The link to the documentation.
 
+### `supabaseTable`
+
+The name of the table in Supabase.
+
 ### `installedVersion`
 
 The installed version of the app.
