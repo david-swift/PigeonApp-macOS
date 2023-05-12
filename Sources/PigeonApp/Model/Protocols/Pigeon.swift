@@ -96,8 +96,10 @@ extension Pigeon {
         Task { @MainActor in
             PigeonModel.shared.supabaseData = try? JSONEncoder().encode(data.wrappedValue)
             PigeonModel.shared.updateSupabaseData = { newValue in
-                if let newValue = try? JSONDecoder().decode(Data.self, from: newValue) {
-                    data.wrappedValue = newValue
+                Task { @MainActor in
+                    if let newValue = try? JSONDecoder().decode(Data.self, from: newValue) {
+                        data.wrappedValue = newValue
+                    }
                 }
             }
         }
