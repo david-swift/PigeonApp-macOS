@@ -38,7 +38,9 @@ public class PigeonModel: ObservableObject {
     /// The data for synchronization with the Supabase database.
     @Published var supabaseData: Data? {
         didSet {
-            setData()
+            if gotData {
+                setData()
+            }
         }
     }
     /// A closure for updating the local data from the Supabase database.
