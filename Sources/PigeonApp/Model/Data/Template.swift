@@ -19,7 +19,7 @@ public struct Template: Identifiable, Codable, SelectionItem {
     /// The template's icon.
     public var icon: SFSymbol
     /// Content of the template.
-    var content: Data
+    public var content: Data
 
     /// Initialize a new template.
     /// - Parameters:
