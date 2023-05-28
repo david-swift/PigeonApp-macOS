@@ -17,9 +17,9 @@ public struct TemplateFolder: Codable, Bindable, Identifiable {
     /// The folder's title.
     public var title: String
     /// The folder's icon.
-    var icon: SFSymbol
+    public var icon: SFSymbol
     /// The templates.
-    var templates: [Template]
+    public var templates: [Template]
 
     /// The template folder as a ``Folder``.
     var folder: Folder<Template> {
