@@ -9,7 +9,7 @@ import ColibriComponents
 import SwiftUI
 
 /// The display mode of the elements in the toolbar.
-public enum ToolbarDisplayMode: Identifiable, CaseIterable, Bindable, Codable {
+public enum ToolbarDisplayMode: Identifiable, CaseIterable, ColibriComponents.Bindable, Codable {
 
     /// Show only icons.
     case iconOnly

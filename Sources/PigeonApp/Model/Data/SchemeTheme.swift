@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 /// A theme containing a light and a dark theme.
-public struct SchemeTheme: Identifiable, Codable, Bindable {
+public struct SchemeTheme: Identifiable, Codable, ColibriComponents.Bindable {
 
     /// The identifier.
     public var id: UUID
