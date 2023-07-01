@@ -16,6 +16,9 @@ struct MainWindow<Content>: View where Content: View {
     /// The active color scheme.
     @Environment(\.colorScheme)
     private var colorScheme
+    /// Open a window.
+    @Environment(\.openWindow)
+    private var openWindow
     /// The content bar of this window, or nil if there is no content bar.
     var content: (Bool, Theme, [TemplateFolder]) -> Content
 
@@ -28,6 +31,18 @@ struct MainWindow<Content>: View where Content: View {
                     displayMode: PigeonModel.shared.settings.toolbarDisplayMode,
                     style: PigeonModel.shared.settings.toolbarStyle
                 )
+                let reminder = {
+                    if let lastReminder = PigeonModel.shared.settings.lastUpdateReminder {
+                        let oneDay: Double = 90_000
+                        return Date.now.timeIntervalSince(lastReminder) > oneDay
+                    }
+                    return true
+                }()
+                if model.pigeonCodeModel.information.appData.newestVersion
+                    != model.pigeonCodeModel.information.appData.versions[safe: 0]?.tag && reminder {
+                    openWindow(id: .updatesSettingsTab)
+                    PigeonModel.shared.settings.lastUpdateReminder = .now
+                }
             }
     }
 

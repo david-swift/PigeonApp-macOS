@@ -205,26 +205,7 @@ public enum StandardSettingsTab: Identifiable {
                 "Updates",
                 comment: "StandardSettingsTab (Updates subtab for checking updates)"
             ), systemSymbol: .arrowTriangle2CirclepathCircle), id: .updatesSettingsTab) {
-                if let newVersion, let link = appData.downloadLink {
-                    VStack(alignment: .center) {
-                        Text(
-                            .init(
-                                "Version \(newVersion) is available.",
-                                comment: "StandardSettingsTab (Description of the newest version)"
-                            )
-                        )
-                        Link(String(localized: .init(
-                            "Download",
-                            comment: "StandardSettingsTab (Link for downloading the newest version)"
-                        )), destination: link)
-                            .pigeonLink()
-                    }
-                } else {
-                    Text(.init(
-                        "You're up-to-date!",
-                        comment: "StandardSettingsTab (A message showing that no update is available)"
-                    ))
-                }
+                UpdateSubtab()
             }
             for version in appData.versions {
                 SettingsSubtab(.init(

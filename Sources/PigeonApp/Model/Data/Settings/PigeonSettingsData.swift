@@ -31,8 +31,6 @@ public struct PigeonSettingsData: Codable {
     public var themes: [SchemeTheme]
     /// The selected theme.
     public var selectedTheme: UUID
-    /// Whether the user has seen the welcome screen of the current version.
-    public var versionOverview: String?
     /// The date of the last update reminder.
     public var lastUpdateReminder: Date?
     /// The URL for the Supabase database.

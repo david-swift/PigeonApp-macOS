@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/david-swift/ActionKit-macOS",
       "state" : {
-        "revision" : "570ced725ad0f5f3f16524c32459fb4e6878cf7e",
-        "version" : "0.1.3"
+        "revision" : "e14fd3b22b05964b7b483a1a330bfc66da51b115",
+        "version" : "0.1.5"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/david-swift/ColibriComponents-macOS",
       "state" : {
-        "revision" : "fbb45300b42cf17aef5ce1a0a89367f7eb70d34f",
-        "version" : "0.1.3"
+        "revision" : "a067425802649917df605daaed4e29853065519d",
+        "version" : "0.1.6"
       }
     },
     {
@@ -86,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/david-swift/SettingsKit-macOS",
       "state" : {
-        "revision" : "a34c879f8dcf3928a0c516dc85fc262ba3fca42d",
-        "version" : "0.1.2"
+        "revision" : "0581b7d93c5dc210161c89d4c5f3de505079cfe7",
+        "version" : "0.1.3"
       }
     },
     {
@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/storage-swift.git",
       "state" : {
-        "revision" : "c3d812b9680cd9872afa40863bb993ffc5c7fdd6",
-        "version" : "0.1.2"
+        "revision" : "db67ce7764ef80e7941cea6bc4a0104c88e060f8",
+        "version" : "0.1.3"
       }
     },
     {
@@ -113,8 +113,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/supabase-swift",
       "state" : {
-        "revision" : "c5d5e3eb7b8db485494949ecdfa9eef126cfa947",
-        "version" : "0.2.1"
+        "revision" : "5fe76b3507f522bea3268a24243f713bcaa4750b",
+        "version" : "0.2.2"
       }
     },
     {
@@ -122,8 +122,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lukepistrol/SwiftLintPlugin",
       "state" : {
-        "revision" : "f69b412a765396d44dc9f4788a5b79919c1ca9e3",
-        "version" : "0.2.2"
+        "revision" : "c8f1c47fda5d2bb8ff9d760f29a4156c775b58bd",
+        "version" : "0.52.3"
       }
     },
     {
