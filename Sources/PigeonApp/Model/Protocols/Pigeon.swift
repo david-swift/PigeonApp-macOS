@@ -23,6 +23,51 @@ extension Pigeon {
     /// The behavior type.
     typealias Behavior = (LocalizedStringResource, FunctionEditor)
 
+    /// Additional scenes (next to the main window and settings scene) in a PigeonApp.
+    @SceneBuilder static var additionalScenes: some Scene {
+        settingsTabWindow(title: .init(
+            "About",
+            comment: "Pigeon (Title of the About window)"
+        ), id: .aboutGeneralSettingsTab) {
+            AboutView(appData: PigeonModel.shared.pigeonCodeModel.information.appData)
+        }
+        settingsTabWindow(title: .init(
+            "Update",
+            comment: "Pigeon (Title of the Update window)"
+        ), id: .updatesSettingsTab) {
+            UpdateSubtab()
+        }
+    }
+
+    /// A window showing a snippet from the settings window.
+    /// - Parameters:
+    ///   - title: The window's title.
+    ///   - id: The window's identifier.
+    ///   - content: The content of the window.
+    /// - Returns: The window scene.
+    @SceneBuilder
+    private static func settingsTabWindow<Content>(
+        title: LocalizedStringResource,
+        id: String,
+        @ViewBuilder content: () -> Content
+    ) -> some Scene where Content: View {
+        let width = 400.0
+        let height = 470.0
+        Window(String(localized: title), id: id) {
+            content()
+                .task { @MainActor in
+                    NSApp.keyWindow?.standardWindowButton(.zoomButton)?.isHidden = true
+                    NSApp.keyWindow?.standardWindowButton(.miniaturizeButton)?.isHidden = true
+                    NSApp.keyWindow?.isMovableByWindowBackground = true
+                    let alphaValue = 0.98
+                    NSApp.keyWindow?.alphaValue = alphaValue
+                }
+        }
+        .windowStyle(.hiddenTitleBar)
+        .defaultSize(width: width, height: height)
+        .commandsRemoved()
+    }
+
     /// Add a shortcut to a settings tab.
     /// - Parameter tab: The settings tab without the shortcut.
     /// - Returns: The settings tab with the shortcut.
@@ -40,17 +85,6 @@ extension Pigeon {
             try? await Task.sleep(nanoseconds: 1)
             PigeonAppAction.setAppearance(PigeonModel.shared.settings.appearance)
             PigeonModel.shared.setSettings(information: PigeonModel.shared.pigeonCodeModel.information)
-            await MainActor.run {
-                let installedVersion = PigeonModel.shared.pigeonCodeModel.information.appData.installedVersion
-                if PigeonModel.shared.settings.versionOverview
-                    != installedVersion?.tag {
-                    SettingsAction.showSettings(
-                        tab: StandardSettingsTab.updates.id,
-                        subtab: installedVersion?.tag ?? .init()
-                    )
-                    PigeonModel.shared.settings.versionOverview = installedVersion?.tag
-                }
-            }
         }
     }
 
@@ -161,17 +195,6 @@ extension Pigeon {
                 editInformation { information in
                     information.appData.newestVersion = version.0
                     information.appData.downloadLink = version.1
-                    let reminder = {
-                        if let lastReminder = PigeonModel.shared.settings.lastUpdateReminder {
-                            let twoDays: Double = 175_000
-                            return Date.now.timeIntervalSince(lastReminder) > twoDays
-                        }
-                        return true
-                    }()
-                    if information.appData.newestVersion != information.appData.versions[safe: 0]?.tag && reminder {
-                        SettingsAction.showSettings(tab: StandardSettingsTab.updates.id, subtab: .updatesSettingsTab)
-                        PigeonModel.shared.settings.lastUpdateReminder = .now
-                    }
                 }
             }
         }

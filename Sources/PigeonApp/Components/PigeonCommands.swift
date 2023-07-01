@@ -11,6 +11,10 @@ import SwiftUI
 /// The commands of a PigeonApp.
 struct PigeonCommands: Commands {
 
+    /// The action for opening a window.
+    @Environment(\.openWindow)
+    var openWindow
+
     /// The body of the commands.
     var body: some Commands {
         ToolbarCommands()
@@ -21,7 +25,7 @@ struct PigeonCommands: Commands {
                     comment: "PigeonCommands (About button in the app's menu)"
                 )
             ) {
-                SettingsAction.showSettings(tab: "General", subtab: .aboutGeneralSettingsTab)
+                openWindow(id: .aboutGeneralSettingsTab)
             }
             if !PigeonModel.shared.pigeonCodeModel.information.hidden.contains(.updates) {
                 Button(
@@ -30,7 +34,7 @@ struct PigeonCommands: Commands {
                         comment: "PigeonCommands (Update button in the app's menu"
                     )
                 ) {
-                    SettingsAction.showSettings(tab: "Updates")
+                    openWindow(id: .updatesSettingsTab)
                 }
             }
         }

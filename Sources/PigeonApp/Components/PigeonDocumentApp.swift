@@ -44,6 +44,7 @@ where Document: FileDocument, Content: View {
         .commands {
             PigeonCommands()
         }
+        Self.additionalScenes
     }
 
     /// The public initializer with all the three views specified.

@@ -39,6 +39,7 @@ public struct PigeonApp<Content>: Pigeon where Content: View {
             .commands {
                 PigeonCommands()
             }
+        Self.additionalScenes
     }
 
     /// The window group of the ``PigeonApp``.
