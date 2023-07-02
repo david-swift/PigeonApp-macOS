@@ -86,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/david-swift/SettingsKit-macOS",
       "state" : {
-        "revision" : "0581b7d93c5dc210161c89d4c5f3de505079cfe7",
-        "version" : "0.1.3"
+        "revision" : "61a411b7afab8d6ebe8389facca5822b8bf4f490",
+        "version" : "0.1.4"
       }
     },
     {

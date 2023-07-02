@@ -9,22 +9,6 @@ public struct PigeonSettingsData: Codable
 Data used for customizing the user experience.
 
 ## Properties
-### `standardSettingsTab`
-
-```swift
-public var standardSettingsTab: String = StandardSettingsTab.general.id
-```
-
-The standard settings tab.
-
-### `standardSettingsSubtab`
-
-```swift
-public var standardSettingsSubtab: String = .aboutGeneralSettingsTab
-```
-
-The standard settings subtab.
-
 ### `templates`
 
 ```swift

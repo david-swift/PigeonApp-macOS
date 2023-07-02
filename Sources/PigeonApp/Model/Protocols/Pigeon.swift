@@ -59,24 +59,11 @@ extension Pigeon {
                     NSApp.keyWindow?.standardWindowButton(.zoomButton)?.isHidden = true
                     NSApp.keyWindow?.standardWindowButton(.miniaturizeButton)?.isHidden = true
                     NSApp.keyWindow?.isMovableByWindowBackground = true
-                    let alphaValue = 0.98
-                    NSApp.keyWindow?.alphaValue = alphaValue
                 }
         }
         .windowStyle(.hiddenTitleBar)
         .defaultSize(width: width, height: height)
         .commandsRemoved()
-    }
-
-    /// Add a shortcut to a settings tab.
-    /// - Parameter tab: The settings tab without the shortcut.
-    /// - Returns: The settings tab with the shortcut.
-    static func shortcut(tab: SettingsTab) -> SettingsTab {
-        var tab = tab
-        for subtab in tab.content where subtab.id == PigeonModel.shared.settings.standardSettingsSubtab {
-            tab.content[id: subtab.id] = subtab.shortcut()
-        }
-        return tab
     }
 
     /// Initialize the appearance on startup.

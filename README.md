@@ -76,7 +76,6 @@ There are several elements added to your app.
 	- The tab “General” in the settings window.
 		- The tab “About” in the tab “General” with the app icon and name.
 		- The tab “Appearance” in the tab “General” with options for customizing the color scheme behavior, icon fill and toolbar appearance. You can access the icon fill via the first closure parameter of the sidebar, content, or detail content view. _Note that a PigeonApp has to have a [customizable toolbar][5] in order to work properly. If that is not the case, [hide][6] the “General” settings tab._
-		- The tab “Keyboard Shortcuts” in the tab “General” with options for changing the settings tab and subtab that is opened with `⌘,`.
 	- The tab “Updates” in the settings window that only shows “You’re up-to-date!” at the moment.
 - `YourApp > About YourApp` that opens the “About” tab in the “General” settings tab.
 - `YourApp > Updates` that opens the “Updates” settings tab.
@@ -222,7 +221,7 @@ Add custom settings tabs. Do not use `settings(symbolVariant:_:)`, instead, use 
 ```
 
 #### Extend Subtabs
-Use the modifiers `extendAboutView(content:)`, `extendAppearanceView(content:)` and `extendShortcutsView(content:)` for extending existing subtabs.
+Use the modifiers `extendAboutView(content:)`, `extendAppearanceView(content:)` and `extendShortcutsView(content:)` for extending (or adding) these subtabs.
 
 #### Hide Tabs
 Hide settings tabs.

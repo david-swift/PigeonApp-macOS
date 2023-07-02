@@ -40,22 +40,6 @@ A window showing a snippet from the settings window.
 | id | The window’s identifier. |
 | content | The content of the window. |
 
-### `shortcut(tab:)`
-
-```swift
-static func shortcut(tab: SettingsTab) -> SettingsTab
-```
-
-Add a shortcut to a settings tab.
-- Parameter tab: The settings tab without the shortcut.
-- Returns: The settings tab with the shortcut.
-
-#### Parameters
-
-| Name | Description |
-| ---- | ----------- |
-| tab | The settings tab without the shortcut. |
-
 ### `initAppearance()`
 
 ```swift

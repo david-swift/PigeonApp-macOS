@@ -152,14 +152,16 @@ public enum StandardSettingsTab: Identifiable {
             ) {
                 AppearanceSettings()
             }
-            SettingsSubtab(
-                .init(.init(
-                    "Keyboard Shortcuts",
-                    comment: "StandardSettingsTab (The general settings' keyboard shortcuts subtab)"
-                ), systemSymbol: .command),
-                id: .keyboardShortcutsGeneralSettingsTab
-            ) {
-                KeyboardShortcutsSettings()
+            if PigeonModel.shared.pigeonCodeModel.information.shortcutsView as? EmptyView == nil {
+                SettingsSubtab(
+                    .init(.init(
+                        "Keyboard Shortcuts",
+                        comment: "StandardSettingsTab (The general settings' keyboard shortcuts subtab)"
+                    ), systemSymbol: .command),
+                    id: .keyboardShortcutsGeneralSettingsTab
+                ) {
+                    KeyboardShortcutsSettings()
+                }
             }
         case .behaviors:
             for behavior in model.behaviors {

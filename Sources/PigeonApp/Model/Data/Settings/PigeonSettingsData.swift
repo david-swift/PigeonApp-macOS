@@ -13,10 +13,6 @@ import SwiftUI
 /// Data used for customizing the user experience.
 public struct PigeonSettingsData: Codable {
 
-    /// The standard settings tab.
-    public var standardSettingsTab: String = StandardSettingsTab.general.id
-    /// The standard settings subtab.
-    public var standardSettingsSubtab: String = .aboutGeneralSettingsTab
     /// The available templates.
     public var templates: [TemplateFolder]
     /// The appearance of the UI.
