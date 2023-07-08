@@ -123,7 +123,7 @@ public enum StandardSettingsTab: Identifiable {
 
     /// The settings tab without the actions.
     var settingsTabContent: SettingsTab {
-        .init(.init(localized, systemSymbol: symbol), id: id) {
+        .init(.init(localized.localized, systemSymbol: symbol), id: id) {
             for subtab in settingsSubtabs {
                 subtab
             }
@@ -165,7 +165,7 @@ public enum StandardSettingsTab: Identifiable {
             }
         case .behaviors:
             for behavior in model.behaviors {
-                SettingsSubtab(.init(behavior.0, systemSymbol: .rectangleGrid1x2), id: behavior.0.key) {
+                SettingsSubtab(.init(behavior.0.localized, systemSymbol: .rectangleGrid1x2), id: behavior.0.key) {
                     behavior.1
                 }
             }

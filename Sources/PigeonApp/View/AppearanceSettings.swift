@@ -69,7 +69,7 @@ struct AppearanceSettings: View {
                     .buttonStyle(.settingsImage(
                         isSelected: appearance == model.settings.appearance
                     ))
-                    .help(appearance.localized)
+                    .help(appearance.localized.localized)
                 }
             }
             .animation(.default, value: model.settings.appearance)
@@ -109,7 +109,7 @@ struct AppearanceSettings: View {
                     style.image
                 }
                 .buttonStyle(.settingsImage(isSelected: style == model.settings.toolbarStyle))
-                .help(style.localized)
+                .help(style.localized.localized)
             }
         }
     }
