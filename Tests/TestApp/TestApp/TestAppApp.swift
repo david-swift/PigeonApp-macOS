@@ -92,5 +92,6 @@ struct TestAppApp: App {
             ("Function 1", .init($function1))
             ("Function 2", .init($function2))
         }
+        .pigeonKeyboardShortcut(.defaultAction)
     }
 }

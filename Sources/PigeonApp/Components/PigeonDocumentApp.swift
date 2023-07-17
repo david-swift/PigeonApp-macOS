@@ -32,6 +32,7 @@ where Document: FileDocument, Content: View {
                 content: view(content, document: file.$document)
             )
         }
+        .keyboardShortcut(pigeonModel.pigeonCodeModel.information.keyboardShortcut)
         .settings(symbolVariant: pigeonModel.settings.iconFill ? .fill : .none) {
             for tab in pigeonModel.pigeonCodeModel.settings {
                 tab

@@ -265,6 +265,14 @@ extension Pigeon {
         return self
     }
 
+    /// Customize the main window's keyboard shortcut without affecting the settings' keyboard shortcut.
+    /// - Parameter shortcut: The new keyboard shortcut of the main window.
+    /// - Returns: The ``PigeonApp`` or ``PigeonDocumentApp``.
+    public func pigeonKeyboardShortcut(_ shortcut: KeyboardShortcut?) -> some Scene {
+        editInformation { $0.keyboardShortcut = shortcut }
+        return self
+    }
+
     /// Edit information about the app.
     /// - Parameter edit: The edit.
     /// - Returns: The ``PigeonApp`` or ``PigeonDocumentApp``.

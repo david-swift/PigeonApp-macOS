@@ -38,5 +38,7 @@ public struct CodeInformation {
     var shortcutsView: any View = EmptyView()
     /// Extensions for the advanced settings subtab.
     var advancedSettings: [SettingsSubtab] = []
+    /// The keyboard shortcut of the main window.
+    var keyboardShortcut: KeyboardShortcut?
 
 }

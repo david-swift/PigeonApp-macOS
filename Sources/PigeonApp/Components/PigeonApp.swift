@@ -27,6 +27,7 @@ public struct PigeonApp<Content>: Pigeon where Content: View {
     /// The main scene of a PigeonApp.
     @SceneBuilder public var body: some Scene {
         mainWindow
+            .keyboardShortcut(pigeonModel.pigeonCodeModel.information.keyboardShortcut)
             .settings(symbolVariant: pigeonModel.settings.iconFill ? .fill : .none) {
                 for tab in pigeonModel.pigeonCodeModel.settings {
                     tab

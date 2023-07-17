@@ -87,3 +87,11 @@ var advancedSettings: [SettingsSubtab] = []
 ```
 
 Extensions for the advanced settings subtab.
+
+### `keyboardShortcut`
+
+```swift
+var keyboardShortcut: KeyboardShortcut?
+```
+
+The keyboard shortcut of the main window.

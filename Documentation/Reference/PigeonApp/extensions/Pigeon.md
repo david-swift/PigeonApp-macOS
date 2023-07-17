@@ -313,6 +313,22 @@ Add the settings tab for editing the app's behaviors.
 | ---- | ----------- |
 | behaviors | The app’s behaviors editors. |
 
+### `pigeonKeyboardShortcut(_:)`
+
+```swift
+public func pigeonKeyboardShortcut(_ shortcut: KeyboardShortcut?) -> some Scene
+```
+
+Customize the main window's keyboard shortcut without affecting the settings' keyboard shortcut.
+- Parameter shortcut: The new keyboard shortcut of the main window.
+- Returns: The ``PigeonApp`` or ``PigeonDocumentApp``.
+
+#### Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| shortcut | The new keyboard shortcut of the main window. |
+
 ### `editInformation(edit:)`
 
 ```swift
