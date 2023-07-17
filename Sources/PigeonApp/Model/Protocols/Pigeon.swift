@@ -179,9 +179,11 @@ extension Pigeon {
     public func newestVersion(_ version: @escaping () async throws -> (String, URL)) -> Self {
         Task { @MainActor in
             if let version = try? await version() {
-                editInformation { information in
-                    information.appData.newestVersion = version.0
-                    information.appData.downloadLink = version.1
+                if version.0 != PigeonModel.shared.pigeonCodeModel.information.appData.installedVersion?.tag {
+                    editInformation { information in
+                        information.appData.newestVersion = version.0
+                        information.appData.downloadLink = version.1
+                    }
                 }
             }
         }

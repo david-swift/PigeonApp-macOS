@@ -38,8 +38,9 @@ struct MainWindow<Content>: View where Content: View {
                     }
                     return true
                 }()
-                if model.pigeonCodeModel.information.appData.newestVersion
-                    != model.pigeonCodeModel.information.appData.versions[safe: 0]?.tag && reminder {
+                if model.pigeonCodeModel.information.appData.newestVersion != nil
+                    && model.pigeonCodeModel.information.appData.downloadLink != nil
+                    && reminder {
                     openWindow(id: .updatesSettingsTab)
                     PigeonModel.shared.settings.lastUpdateReminder = .now
                 }
