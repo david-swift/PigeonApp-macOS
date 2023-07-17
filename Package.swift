@@ -22,7 +22,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.2.2"),
-        .package(url: "https://github.com/david-swift/SettingsKit-macOS", from: "0.1.5"),
+        .package(url: "https://github.com/david-swift/SettingsKit-macOS", from: "0.1.9"),
         .package(url: "https://github.com/david-swift/ActionKit-macOS", from: "0.1.6"),
         .package(url: "https://github.com/supabase-community/supabase-swift", .upToNextMajor(from: "0.2.1"))
     ],

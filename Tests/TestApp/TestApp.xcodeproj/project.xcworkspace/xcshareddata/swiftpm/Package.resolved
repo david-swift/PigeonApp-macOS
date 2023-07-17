@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/david-swift/ColibriComponents-macOS",
       "state" : {
-        "revision" : "b60360bcadcea62b3be4463227a89d5b2518715d",
-        "version" : "0.1.7"
+        "revision" : "79d40222f1d219a1417b9e03a0f08f1b61fa467a",
+        "version" : "0.1.9"
       }
     },
     {
@@ -86,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/david-swift/SettingsKit-macOS",
       "state" : {
-        "revision" : "6e9b834c3661c1600dd87643fda931c4ffc71d3e",
-        "version" : "0.1.5"
+        "revision" : "5b670db13e6ef15741a26a19d826f46202980aab",
+        "version" : "0.1.9"
       }
     },
     {
