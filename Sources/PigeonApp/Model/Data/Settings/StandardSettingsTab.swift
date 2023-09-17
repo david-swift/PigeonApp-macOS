@@ -123,7 +123,7 @@ public enum StandardSettingsTab: Identifiable {
 
     /// The settings tab without the actions.
     var settingsTabContent: SettingsTab {
-        .init(.init(localized.localized, systemSymbol: symbol), id: id) {
+        .init(.new(title: localized.localized, icon: symbol), id: id) {
             for subtab in settingsSubtabs {
                 subtab
             }
@@ -137,27 +137,27 @@ public enum StandardSettingsTab: Identifiable {
         let appData = codeModel.information.appData
         switch self {
         case .general:
-            SettingsSubtab(.init(.init(
+            SettingsSubtab(.new(title: LocalizedStringResource(
                 "About",
                 comment: "StandardSettingsTab (The general settings' about subtab)"
-            ), systemSymbol: .app), id: .aboutGeneralSettingsTab) {
+            ).localized, icon: .app), id: .aboutGeneralSettingsTab) {
                 AboutView(appData: appData)
             }
             SettingsSubtab(
-                .init(.init(
+                .new(title: LocalizedStringResource(
                     "Appearance",
                     comment: "StandardSettingsTab (The general settings' appearance subtab)"
-                ), systemSymbol: .circleLefthalfFilled),
+                ).localized, icon: .circleLefthalfFilled),
                 id: .appearanceGeneralSettingsTab
             ) {
                 AppearanceSettings()
             }
             if PigeonModel.shared.pigeonCodeModel.information.shortcutsView as? EmptyView == nil {
                 SettingsSubtab(
-                    .init(.init(
+                    .new(title: LocalizedStringResource(
                         "Keyboard Shortcuts",
                         comment: "StandardSettingsTab (The general settings' keyboard shortcuts subtab)"
-                    ), systemSymbol: .command),
+                    ).localized, icon: .command),
                     id: .keyboardShortcutsGeneralSettingsTab
                 ) {
                     KeyboardShortcutsSettings()
@@ -165,20 +165,20 @@ public enum StandardSettingsTab: Identifiable {
             }
         case .behaviors:
             for behavior in model.behaviors {
-                SettingsSubtab(.init(behavior.0.localized, systemSymbol: .rectangleGrid1x2), id: behavior.0.key) {
+                SettingsSubtab(.new(title: behavior.0.localized, icon: .rectangleGrid1x2), id: behavior.0.key) {
                     behavior.1
                 }
             }
         case .synchronization:
-            SettingsSubtab(.init(.init(
+            SettingsSubtab(.new(title: LocalizedStringResource(
                 "Synchronization",
                 comment: "StandardSettingsTab (Synchronization settings subtab)"
-            ), systemSymbol: .arrowTriangle2Circlepath), id: "sync") {
+            ).localized, icon: .arrowTriangle2Circlepath), id: "sync") {
                 SynchronizationSettings()
             }
         case .templates:
             for group in PigeonModel.shared.settings.templates {
-                SettingsSubtab(.init(group.title, systemSymbol: group.icon), id: group.id.uuidString) {
+                SettingsSubtab(.new(title: group.title, icon: group.icon), id: group.id.uuidString) {
                     TemplatesSettingsTab(group: group.binding { newValue in
                         PigeonModel.shared.settings.templates[id: group.id] = newValue
                     })
@@ -186,9 +186,9 @@ public enum StandardSettingsTab: Identifiable {
             }
         case .themes:
             for theme in PigeonModel.shared.settings.themes {
-                SettingsSubtab(.init(
-                    theme.name,
-                    systemSymbol: theme.id == model.settings.selectedTheme ? .checkmark : .paintbrush
+                SettingsSubtab(.new(
+                    title: theme.name,
+                    icon: theme.id == model.settings.selectedTheme ? .checkmark : .paintbrush
                 ), id: theme.id.uuidString) {
                     ThemesSettings(theme: theme.binding { newValue in
                         PigeonModel.shared.settings.themes[id: theme.id] = newValue
@@ -203,16 +203,16 @@ public enum StandardSettingsTab: Identifiable {
                 }
                 return nil
             }()
-            SettingsSubtab(.init(.init(
+            SettingsSubtab(.new(title: LocalizedStringResource(
                 "Updates",
                 comment: "StandardSettingsTab (Updates subtab for checking updates)"
-            ), systemSymbol: .arrowTriangle2CirclepathCircle), id: .updatesSettingsTab) {
+            ).localized, icon: .arrowTriangle2CirclepathCircle), id: .updatesSettingsTab) {
                 UpdateSubtab()
             }
             for version in appData.versions {
-                SettingsSubtab(.init(
-                    version.tag,
-                    systemSymbol: version.tag == appData.installedVersion?.tag ? .checkmark : .bookClosed
+                SettingsSubtab(.new(
+                    title: version.tag,
+                    icon: version.tag == appData.installedVersion?.tag ? .checkmark : .bookClosed
                 ), id: version.tag) {
                     VersionView(version: version, newVersion: newVersion, downloadLink: appData.downloadLink)
                 }

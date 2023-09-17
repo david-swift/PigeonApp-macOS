@@ -52,7 +52,7 @@ struct TestAppApp: App {
         }
         .help("YourApp Help", link: .string("https://example.com/"))
         .pigeonSettings {
-            SettingsTab(.init("Cool", systemSymbol: .hare), id: "cool") {
+            SettingsTab(.new(title: "Cool", icon: .hare), id: "cool") {
                 SettingsSubtab(.noSelection, id: "tab") {
                     Text("The default tab.")
                 }
@@ -84,7 +84,7 @@ struct TestAppApp: App {
             }
         }
         .advancedSettings {
-            SettingsSubtab(.init("Location", systemSymbol: .location), id: "location") {
+            SettingsSubtab(.new(title: "Location", icon: .location), id: "location") {
                 Text("Location")
             }
         }

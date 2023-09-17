@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/david-swift/ColibriComponents-macOS",
       "state" : {
-        "revision" : "79d40222f1d219a1417b9e03a0f08f1b61fa467a",
-        "version" : "0.1.9"
+        "revision" : "ce8b4accee3361a904831a3c659de0c99369e8bf",
+        "version" : "0.1.11"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/functions-swift",
       "state" : {
-        "revision" : "c680cdfc53399376bdece299b1387b4fb3da514e",
-        "version" : "1.0.0"
+        "revision" : "98878a6e3aebfeb6aaeda234db66d64196e4cf31",
+        "version" : "1.1.0"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/gotrue-swift",
       "state" : {
-        "revision" : "56b5d61e8cd47d422b5256209c6311fca199e723",
-        "version" : "1.1.2"
+        "revision" : "4bf132d73d322ee5d6d648f02deb9f2bc19cc659",
+        "version" : "1.2.1"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/postgrest-swift",
       "state" : {
-        "revision" : "a3c2d6a2ede94d2529edf063b056b1a66fd9cdc2",
-        "version" : "1.0.0"
+        "revision" : "fb91f56ffcfe829c0cba2bfc180b1e669a8dd2e4",
+        "version" : "1.0.1"
       }
     },
     {
@@ -86,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/david-swift/SettingsKit-macOS",
       "state" : {
-        "revision" : "5b670db13e6ef15741a26a19d826f46202980aab",
-        "version" : "0.1.9"
+        "revision" : "0a6d4d8002d6e79a5466be7fcdcd17384b050cd8",
+        "version" : "0.2.0"
       }
     },
     {
@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/storage-swift.git",
       "state" : {
-        "revision" : "db67ce7764ef80e7941cea6bc4a0104c88e060f8",
-        "version" : "0.1.3"
+        "revision" : "65cae9e1156711043cbdebb27b4df93cbef46a1b",
+        "version" : "0.1.4"
       }
     },
     {
@@ -113,8 +113,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/supabase-swift",
       "state" : {
-        "revision" : "5fe76b3507f522bea3268a24243f713bcaa4750b",
-        "version" : "0.2.2"
+        "revision" : "7088b85247c8e56317f0b22b9d60655e8f762fec",
+        "version" : "0.3.0"
       }
     },
     {
