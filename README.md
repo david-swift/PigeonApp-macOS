@@ -19,19 +19,9 @@ _PigeonApp_ contains two structures, `PigeonApp` and `PigeonDocumentApp` for rep
 
 ## Table of Contents
 
-- [Elements][1]
-- [Installation][2]
-- [Usage][3]
-- [Thanks][4]
-
-## Elements
-
-| Name              | Description                                                                                                     |
-| ----------------- | --------------------------------------------------------------------------------------------------------------- |
-| PigeonApp         | A replacement for `WindowGroup` for more consistency.                                                           |
-| PigeonDocumentApp | A replacement for `DocumentGroup` for more consistency.                                                         |
-| PigeonModel       | Stores data about your app.  You can modify it manually, but it’s not recommended to do so.                     |
-| PigeonAppAction   | A collection of functions that modify or access the `NSApplication`, or interact with the data for a PigeonApp. |
+- [Installation][1]
+- [Usage][2]
+- [Thanks][3]
 
 ## Installation
 
@@ -75,7 +65,7 @@ There are several elements added to your app.
 - A settings window.
 	- The tab “General” in the settings window.
 		- The tab “About” in the tab “General” with the app icon and name.
-		- The tab “Appearance” in the tab “General” with options for customizing the color scheme behavior, icon fill and toolbar appearance. You can access the icon fill via the first closure parameter of the sidebar, content, or detail content view. _Note that a PigeonApp has to have a [customizable toolbar][5] in order to work properly. If that is not the case, [hide][6] the “General” settings tab._
+		- The tab “Appearance” in the tab “General” with options for customizing the color scheme behavior, icon fill and toolbar appearance. You can access the icon fill via the first closure parameter of the sidebar, content, or detail content view. _Note that a PigeonApp has to have a [customizable toolbar][4] in order to work properly. If that is not the case, [hide][5] the “General” settings tab._
 	- The tab “Updates” in the settings window that only shows “You’re up-to-date!” at the moment.
 - `YourApp > About YourApp` that opens the “About” tab in the “General” settings tab.
 - `YourApp > Updates` that opens the “Updates” settings tab.
@@ -172,7 +162,7 @@ Add the “Themes” settings tab by providing a preview for the themes. The pre
 ```
 
 #### Advanced Settings
-Add the “Advanced” settings tab by defining the [subtabs][7].
+Add the “Advanced” settings tab by defining the [subtabs][6].
 
 ```swift
 // ...
@@ -185,7 +175,7 @@ Add the “Advanced” settings tab by defining the [subtabs][7].
 ```
 
 #### Behaviors Settings Tab
-Add the “Behaviors” settings tab by providing behaviors titles and their function editors. You are responsible for managing the behaviors, find more information [here][8].
+Add the “Behaviors” settings tab by providing behaviors titles and their function editors. You are responsible for managing the behaviors, find more information [here][7].
 
 ```swift
 // ...
@@ -197,7 +187,7 @@ Add the “Behaviors” settings tab by providing behaviors titles and their fun
 ```
 
 #### Synchronization Settings Tab
-Let the user specify a [Supabase][9] project and table row for synchronization. Local changes are automatically written into the table row and changes on the database observed and the local value updated.
+Let the user specify a [Supabase][8] project and table row for synchronization. Local changes are automatically written into the table row and changes on the database observed and the local value updated.
 
 ```swift
 // ...
@@ -206,7 +196,7 @@ Let the user specify a [Supabase][9] project and table row for synchronization. 
 ```
 
 #### Custom Settings Tabs
-Add custom settings tabs. Do not use `settings(symbolVariant:_:)`, instead, use `pigeonSettings(_:)`. Learn [here][10] more about how to define settings or extend existing tabs.
+Add custom settings tabs. Do not use `settings(symbolVariant:_:)`, instead, use `pigeonSettings(_:)`. Learn [here][9] more about how to define settings or extend existing tabs.
 
 ```swift
 // ...
@@ -235,39 +225,38 @@ Hide settings tabs.
 ## Thanks
 
 ### Dependencies
-- [Supabase][11] licensed under the [MIT license][12]
-- [ActionKit][13] licensed under the [MIT license][14]
-- [SettingsKit][15] licensed under the [MIT license][16]
-- [SwiftLintPlugin][17] licensed under the [MIT license][18]
+- [Supabase][10] licensed under the [MIT license][11]
+- [ActionKit][12] licensed under the [MIT license][13]
+- [SettingsKit][14] licensed under the [MIT license][15]
+- [SwiftLintPlugin][16] licensed under the [MIT license][17]
 
 ### Other Thanks
-- The [contributors][19]
-- [SourceDocs][20] used for generating the [docs][21]
-- [SwiftLint][22] for checking whether code style conventions are violated
-- The programming language [Swift][23]
+- The [contributors][18]
+- [SourceDocs][19] used for generating the [docs][20]
+- [SwiftLint][21] for checking whether code style conventions are violated
+- The programming language [Swift][22]
 
-[1]:	#Elements
-[2]:	#Installation
-[3]:	#Usage
-[4]:	#Thanks
-[5]:	https://nilcoalescing.com/blog/CustomizableToolbarOniPadInSwiftUI/#allow-toolbar-customization
-[6]:	#Hide-Tabs
-[7]:	https://github.com/david-swift/SettingsKit-macOS
-[8]:	https://github.com/david-swift/ActionKit-macOS
-[9]:	https://supabase.com
-[10]:	https://github.com/david-swift/SettingsKit-macOS
-[11]:	https://github.com/supabase-community/supabase-swift
-[12]:	https://github.com/supabase-community/supabase-swift/blob/master/LICENSE
-[13]:	https://github.com/david-swift/ActionKit-macOS
-[14]:	https://github.com/david-swift/ActionKit-macOS/blob/main/LICENSE.md
-[15]:	https://github.com/david-swift/SettingsKit-macOS
-[16]:	https://github.com/david-swift/SettingsKit-macOS/blob/main/LICENSE.md
-[17]:	https://github.com/lukepistrol/SwiftLintPlugin
-[18]:	https://github.com/lukepistrol/SwiftLintPlugin/blob/main/LICENSE
-[19]:	Contributors.md
-[20]:	https://github.com/SourceDocs/SourceDocs
-[21]:	Documentation/Reference/ColibriComponents/README.md
-[22]:	https://github.com/realm/SwiftLint
-[23]:	https://github.com/apple/swift
+[1]:	#installation
+[2]:	#usage
+[3]:	#thanks
+[4]:	https://nilcoalescing.com/blog/CustomizableToolbarOniPadInSwiftUI/#allow-toolbar-customization
+[5]:	#Hide-Tabs
+[6]:	https://github.com/david-swift/SettingsKit-macOS
+[7]:	https://github.com/david-swift/ActionKit-macOS
+[8]:	https://supabase.com
+[9]:	https://github.com/david-swift/SettingsKit-macOS
+[10]:	https://github.com/supabase-community/supabase-swift
+[11]:	https://github.com/supabase-community/supabase-swift/blob/master/LICENSE
+[12]:	https://github.com/david-swift/ActionKit-macOS
+[13]:	https://github.com/david-swift/ActionKit-macOS/blob/main/LICENSE.md
+[14]:	https://github.com/david-swift/SettingsKit-macOS
+[15]:	https://github.com/david-swift/SettingsKit-macOS/blob/main/LICENSE.md
+[16]:	https://github.com/lukepistrol/SwiftLintPlugin
+[17]:	https://github.com/lukepistrol/SwiftLintPlugin/blob/main/LICENSE
+[18]:	Contributors.md
+[19]:	https://github.com/SourceDocs/SourceDocs
+[20]:	Documentation/Reference/ColibriComponents/README.md
+[21]:	https://github.com/realm/SwiftLint
+[22]:	https://github.com/apple/swift
 
 [image-1]:	Icons/GitHubBanner.png
