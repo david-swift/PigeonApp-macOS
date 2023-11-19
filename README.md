@@ -1,3 +1,7 @@
+> [!NOTE]
+> This project is no longer maintained.
+> [Dvandva](https://github.com/david-swift/Dvandva/tree/main) is an alternative supporting multiple platforms.
+
 <p align="center">
   <img width="256" alt="PigeonApp Icon" src="Icons/PigeonAppIcon.png">
   <h1 align="center">PigeonApp</h1>
