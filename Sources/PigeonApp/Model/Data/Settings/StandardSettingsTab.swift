@@ -87,7 +87,7 @@ public enum StandardSettingsTab: Identifiable {
                         )),
                         icon: .folder
                     ) { })
-                } remove: { index in
+                } remove: { _, index in
                     if let index {
                         PigeonModel.shared.settings.templates.remove(at: index)
                     }
@@ -104,7 +104,7 @@ public enum StandardSettingsTab: Identifiable {
                             dark: Theme()
                         )
                     )
-                } remove: { index in
+                } remove: { _, index in
                     if let index {
                         let themes = PigeonModel.shared.settings.themes
                         let isSelected = themes[safe: index]?.id == PigeonModel.shared.settings.selectedTheme
